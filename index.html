@@ -47,6 +47,8 @@ nav a:hover{color:var(--accent-d)}
 .hero p{max-width:520px;color:#cdd3db;margin-bottom:2rem}
 .hero .btns{display:flex;gap:14px;flex-wrap:wrap}
 
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-art img{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 18px 50px rgba(0,0,0,.55);border:1px solid rgba(201,149,74,.5)}
 /* about */
 .about{padding:96px 0;background:var(--white)}
 .about .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
@@ -107,7 +109,8 @@ footer{background:#080b0f;color:#7d8794;font-size:.8rem;padding:28px 0;text-alig
   .caps .row{grid-template-columns:repeat(2,1fr)}
   .tiles{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:1fr;gap:28px}.steps::before{display:none}
-  .hero{padding:90px 0 80px}
+  .hero{padding:70px 0 70px}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
 }
 </style>
 </head>
@@ -132,7 +135,8 @@ footer{background:#080b0f;color:#7d8794;font-size:.8rem;padding:28px 0;text-alig
 </header>
 
 <section class="hero" id="home">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
     <div class="eyebrow">Online Retail &amp; Sourcing</div>
     <h1>Quality Products, Sourced Smart and Delivered to <em>Customers Nationwide</em></h1>
     <p>LM Marketplace Depot finds in-demand consumer products and brings them to shoppers across the top online marketplaces, with fast fulfillment and honest service.</p>
@@ -140,6 +144,8 @@ footer{background:#080b0f;color:#7d8794;font-size:.8rem;padding:28px 0;text-alig
       <a href="#contact" class="btn btn-solid">Work With Us</a>
       <a href="#about" class="btn btn-ghost">Learn More</a>
     </div>
+    </div>
+    <div class="hero-art"><img src="images/lm-marketplace-depot-logo.jpg" alt="L&amp;M Marketplace Depot logo" width="1100" height="825"></div>
   </div>
 </section>
 
