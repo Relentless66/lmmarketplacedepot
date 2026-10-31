@@ -10,7 +10,7 @@
 <style>
 :root{
   --ink:#0d1117; --ink-2:#161b22; --paper:#fbfaf7; --white:#fff;
-  --muted:#5b6370; --line:#e5e2da; --accent:#c9954a; --accent-d:#a87832;
+  --muted:#5b6370; --line:#e5e2da; --gold:#f0b840;--accent:#c9954a; --accent-d:#a87832;
   --serif:Georgia,"Times New Roman",serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -28,16 +28,17 @@ h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin:.4rem 0 1rem}
 .btn-line{border-color:var(--ink);color:var(--ink)}.btn-line:hover{background:var(--ink);color:#fff}
 
 /* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:50;background:#000;border-bottom:2px solid var(--gold)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
 .logo{font-weight:700;letter-spacing:.2em;font-size:1rem}
 .logo img{display:block;height:54px;width:auto}
 .logo small{display:block;font-weight:400;font-size:.62rem;letter-spacing:.3em;color:var(--muted);border-top:2px solid var(--accent);padding-top:2px;margin-top:2px;width:max-content}
 nav ul{display:flex;gap:26px;list-style:none}
-nav a{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#333}
-nav a:hover{color:var(--accent-d)}
+nav a{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+nav a:hover{color:#fff}
 .nav .btn{padding:.65rem 1.1rem}
-.burger{display:none;background:none;border:1px solid var(--line);padding:.45rem .7rem;font-size:1rem;cursor:pointer}
+.nav .btn-solid{background:var(--gold);color:#000}.nav .btn-solid:hover{background:#fff}
+.burger{display:none;background:none;border:1px solid var(--gold);color:var(--gold);padding:.45rem .7rem;font-size:1rem;cursor:pointer}
 
 /* hero */
 .hero{position:relative;color:#fff;background:
@@ -105,10 +106,10 @@ footer{background:#080b0f;color:#7d8794;font-size:.8rem;padding:28px 0;text-alig
 
 @media(max-width:900px){
   .burger{display:block}
-  nav{position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);display:none}
+  nav{position:absolute;top:72px;left:0;right:0;background:#000;border-bottom:2px solid var(--gold);display:none}
   nav.open{display:block}
   nav ul{flex-direction:column;gap:0;padding:8px 24px}
-  nav li a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  nav li a{display:block;padding:14px 0;border-bottom:1px solid #2a2a2a}
   .nav .btn{display:none}
   .about .grid,.contact .grid{grid-template-columns:1fr;gap:40px}
   .caps .row{grid-template-columns:repeat(2,1fr)}
@@ -123,7 +124,7 @@ footer{background:#080b0f;color:#7d8794;font-size:.8rem;padding:28px 0;text-alig
 
 <header>
   <div class="wrap nav">
-    <a href="#home" class="logo" aria-label="L&amp;M Marketplace Depot home"><img src="images/logo-banner.jpg" alt="L&amp;M Marketplace Depot" width="900" height="225"></a>
+    <a href="#home" class="logo" aria-label="L&amp;M Marketplace Depot home"><img src="images/logo-banner.jpg?v=2" alt="L&amp;M Marketplace Depot" width="900" height="225"></a>
     <nav id="menu" aria-label="Main">
       <ul>
         <li><a href="#home">Home</a></li>
@@ -134,7 +135,7 @@ footer{background:#080b0f;color:#7d8794;font-size:.8rem;padding:28px 0;text-alig
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a href="#contact" class="btn btn-dark">Get in Touch</a>
+    <a href="#contact" class="btn btn-solid">Get in Touch</a>
     <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
   </div>
 </header>
