@@ -222,9 +222,9 @@ footer{background:#080b0f;color:#7d8794;font-size:.8rem;padding:28px 0;text-alig
       <h2>Partner With Us</h2>
       <p>Whether you are a supplier looking for a reliable seller or a customer with a question, send us a note and we will get back to you.</p>
       <ul>
-        <li>Email: <!-- TODO: replace --> <span id="mail">hello@your-domain.com</span></li>
-        <li>Phone: (000) 000-0000</li>
-        <li>Location: Your City, ST</li>
+        <li>Email: <a href="mailto:support@lmmarketplacedepot.com">support@lmmarketplacedepot.com</a></li>
+        <li>Phone: <a href="tel:+12762078607">(276) 207-8607</a></li>
+        <li>Location: 8636 AL Philpott Hwy, Martinsville, VA 24112</li>
       </ul>
     </div>
     <form id="f" onsubmit="return send(event)">
@@ -242,7 +242,7 @@ footer{background:#080b0f;color:#7d8794;font-size:.8rem;padding:28px 0;text-alig
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
-var TO="hello@your-domain.com"; // TODO: set your real business email
+var TO="support@lmmarketplacedepot.com";
 function send(e){e.preventDefault();var f=e.target;
   var s=encodeURIComponent("Website inquiry: "+f.topic.value);
   var b=encodeURIComponent("Name: "+f.name.value+"\nEmail: "+f.email.value+"\n\n"+f.msg.value);
